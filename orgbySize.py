@@ -10,14 +10,17 @@ class orgbySize:
 
             self.file_path = os.path.join(self.current_dir,file)
             self.file_size = os.path.getsize(self.file_path)
+
+            # To get size of the file in KBs
             self.file_size_kbs = round(self.file_size/1024)
-            print(self.file_size_kbs)
 
             self.current_filepath = os.path.join(self.current_dir,file)
 
             if self.file_size_kbs <= 100:
                 self.to_filepath = os.path.join(self.current_dir,'Below 100KB')
                 self.to_path = os.path.join(self.to_filepath,file)
+
+                # If folder not present already, create one
                 if not os.path.isdir(self.to_filepath):
                     os.mkdir(self.to_filepath)
                 shutil.move(self.current_filepath,self.to_path)

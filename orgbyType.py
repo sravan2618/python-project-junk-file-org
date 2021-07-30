@@ -9,6 +9,7 @@ class orgbyType:
     def moveFiles(self):
         for file in os.listdir(self.current_dir):
 
+            # To get extension of the file
             self.file_ext = (os.path.splitext(file)[1][1:].lower())
             
             self.current_filepath = os.path.join(self.current_dir,file)
@@ -16,6 +17,8 @@ class orgbyType:
             if self.file_ext in constants.DOCUMENTS:
                 self.to_filepath = os.path.join(self.current_dir,'Documents')
                 self.to_path = os.path.join(self.to_filepath, file)
+                
+                # If folder not present already, create one
                 if not os.path.isdir(self.to_filepath):
                     os.mkdir(self.to_filepath)
                 shutil.move(self.current_filepath,self.to_path)
