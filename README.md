@@ -15,7 +15,7 @@ If Organize by date is selected, then the files will be organized by their last 
 ## How to run
 There are two ways to run the program
 ### 1. Graphical User Interface
-Open JFO.exe file to run the GUI Version of the program, which is simple and self-explainatory.
+Open JFO.exe file to run the GUI Version of the program, which is simple and self-explanatory.
 You can pick folder through a gui instead of manually typing the folder path.
 GUI also have a DARK MODE, To enable dark mode click on my name at the bottom right corner.
 

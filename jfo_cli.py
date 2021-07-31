@@ -25,7 +25,7 @@ if __name__ == "__main__":
     print('\n')
 
     if caps_org_method == 'T':
-        move = orgbyType.orgbyType(PATH)
+        move = orgbyType(PATH)
         move.moveFiles()
     elif caps_org_method == 'S':
         move = orgbySize(PATH)
